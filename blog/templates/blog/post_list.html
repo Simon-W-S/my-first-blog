@@ -13,6 +13,16 @@
   
   
   <body>
+    <div> 
+    {% for post in posts %}
+      <article>
+          <time>published: {{post.published_date}} </time>
+          <h2><a href=""> {{ post }} </a> </h2>
+          <p>{{ post.text|linebreaksbr }} </p>
+      </article>
+    {% endfor %}
+    
+    </div>
   
     <p> Bonjour! </p>
     <p> ça marche!</p>
@@ -23,7 +33,7 @@
       <li>Des oeufs </li>
     </ul>
   
-  <header>
+        <header>
             <h1><a href="/">Blog Django Girls</a></h1>
         </header>
 
